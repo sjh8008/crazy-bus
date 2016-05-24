@@ -3,6 +3,6 @@ class Location < ActiveRecord::Base
   after_validation :geocode #auto-fetches coords from geocoder gem
 
   def full_street_address
-    "#(street_address), #(city), GA"
+    "#{street_address}, #{city}, GA"
   end
 end
